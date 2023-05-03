@@ -11,7 +11,7 @@ const routes = {
   css: {
     watch: "src/scss/*",
     src: "src/scss/styles.scss",
-    dest: "dest/css",
+    dest: "dist/css",
   },
 };
 
@@ -32,7 +32,7 @@ const watch = () => {
   gulp.watch(routes.css.watch, styles);
 };
 
-const clean = async () => await deleteSync(["dest/"]);
+const clean = async () => await deleteSync(["dist/"]);
 
 const prepare = gulp.series([clean]);
 
